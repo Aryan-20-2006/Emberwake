@@ -19,7 +19,20 @@ public class PlayerMovement : MonoBehaviour
     [Header("Projectile")]
     public float fireCooldown = 0.1f;
     public string fireTriggerName = "FireProjectile";
-    public string fireStateName = "SoulProjectile";
+    public string fireStateName = "Throw";
+    public bool hasOrb;
+    public string hasOrbParameterName = "HasOrb";
+    public float throwConsumeDelay = 0.18f;
+    [Range(0f, 1f)] public float throwSpawnNormalizedTime = 0.8f;
+    public float throwSpawnMaxDelay = 0.75f;
+
+    [Header("Thrown Projectile")]
+    public GameObject thrownProjectilePrefab;
+    public Transform projectileSpawnPoint;
+    public Vector2 projectileSpawnOffset = new Vector2(0.6f, 0.1f);
+    public float projectileSpeed = 10f;
+    public float projectileLifetime = 1.4f;
+    public bool spawnProjectileAtThrowStart = false;
 
     [Header("Debug")]
     public bool showInputDebug = true;
@@ -45,6 +58,12 @@ public class PlayerMovement : MonoBehaviour
     private bool hasFlightTriggeredThisHold;
     private float fireCooldownTimer;
     private int fireTriggerHash;
+    private int hasOrbParameterHash;
+    private bool throwInProgress;
+    private bool throwFinalizePending;
+    private bool projectileSpawnedThisThrow;
+    private float throwFinalizeAtUnscaledTime;
+    private float throwFinalizeTimeoutAtUnscaledTime;
     private string lastFireDebugMessage = "none";
 
     void Start()
@@ -53,6 +72,7 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         fireTriggerHash = Animator.StringToHash(fireTriggerName);
+        hasOrbParameterHash = Animator.StringToHash(hasOrbParameterName);
 
         if (rb == null)
         {
@@ -79,6 +99,8 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.LogWarning("PlayerMovement SpriteRenderer not found. Sprite flipping will not update.");
         }
+
+        SetAnimatorHasOrb(hasOrb);
     }
 
     void Update()
@@ -86,32 +108,41 @@ public class PlayerMovement : MonoBehaviour
         if (fireCooldownTimer > 0f)
             fireCooldownTimer -= Time.deltaTime;
 
-        if (Keyboard.current == null)
-        {
-            moveInput = 0f;
-            jumpHeld = false;
-            jumpPressedThisFrame = false;
-            wantsFlight = false;
-            isFlying = false;
-            isGliding = false;
-
-            UpdateAnimator();
-            return;
-        }
-
         var keyboard = Keyboard.current;
 
+        bool leftPressed;
+        bool rightPressed;
+        bool jumpIsHeld;
+        bool jumpPressedNow;
+        bool firePressedNow;
+
+        if (keyboard != null)
+        {
+            leftPressed = keyboard.aKey.isPressed || keyboard.leftArrowKey.isPressed;
+            rightPressed = keyboard.dKey.isPressed || keyboard.rightArrowKey.isPressed;
+            jumpIsHeld = keyboard.spaceKey.isPressed;
+            jumpPressedNow = keyboard.spaceKey.wasPressedThisFrame;
+            firePressedNow = keyboard.fKey.wasPressedThisFrame;
+        }
+        else
+        {
+            // Fallback when Input System keyboard is unavailable or disabled.
+            leftPressed = Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow);
+            rightPressed = Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow);
+            jumpIsHeld = Input.GetKey(KeyCode.Space);
+            jumpPressedNow = Input.GetKeyDown(KeyCode.Space);
+            firePressedNow = Input.GetKeyDown(KeyCode.F);
+        }
+
         // Movement input
-        bool leftPressed = keyboard.aKey.isPressed;
-        bool rightPressed = keyboard.dKey.isPressed;
         moveInput = (rightPressed ? 1f : 0f) - (leftPressed ? 1f : 0f);
 
         // Ground check
         isGrounded = groundCheck != null && Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
         // SPACE HOLD TIMER
-        jumpHeld = keyboard.spaceKey.isPressed;
-        jumpPressedThisFrame |= keyboard.spaceKey.wasPressedThisFrame;
+        jumpHeld = jumpIsHeld;
+        jumpPressedThisFrame |= jumpPressedNow;
 
         if (jumpHeld)
         {
@@ -155,16 +186,38 @@ public class PlayerMovement : MonoBehaviour
                 spriteRenderer.flipX = true;
         }
 
-        bool firePressedThisFrame = keyboard.fKey.wasPressedThisFrame;
-        if (firePressedThisFrame && fireCooldownTimer <= 0f)
+        bool firePressedThisFrame = firePressedNow;
+        if (firePressedThisFrame && throwInProgress)
         {
-            TriggerProjectileAnimation();
-            fireCooldownTimer = fireCooldown;
+            lastFireDebugMessage = "Throw in progress";
+        }
+        else if (firePressedThisFrame && !hasOrb)
+        {
+            lastFireDebugMessage = "F pressed but no orb";
+        }
+        else if (firePressedThisFrame && fireCooldownTimer <= 0f)
+        {
+            bool throwTriggered = TriggerProjectileAnimation();
+            if (throwTriggered)
+            {
+                throwInProgress = true;
+                projectileSpawnedThisThrow = false;
+                if (spawnProjectileAtThrowStart)
+                    projectileSpawnedThisThrow = SpawnThrownProjectile();
+
+                throwFinalizePending = true;
+                throwFinalizeAtUnscaledTime = Time.unscaledTime + Mathf.Max(0.01f, throwConsumeDelay);
+                throwFinalizeTimeoutAtUnscaledTime = Time.unscaledTime + Mathf.Max(throwSpawnMaxDelay, throwConsumeDelay + 0.05f);
+                fireCooldownTimer = fireCooldown;
+                lastFireDebugMessage = "Throw started";
+            }
         }
         else if (firePressedThisFrame)
         {
             lastFireDebugMessage = "F pressed but cooldown active";
         }
+
+        UpdateThrowLifecycle();
 
         UpdateAnimator();
     }
@@ -229,45 +282,76 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("isFlying", isFlying);
     }
 
-    private void TriggerProjectileAnimation()
+    private bool TriggerProjectileAnimation()
     {
         if (animator == null)
         {
             lastFireDebugMessage = "Animator missing";
-            return;
+            return false;
         }
 
         if (animator.runtimeAnimatorController == null)
         {
             Debug.LogWarning("PlayerMovement fire ignored because Animator has no controller assigned.");
             lastFireDebugMessage = "Animator controller missing";
-            return;
+            return false;
         }
+
+        string stateToPlay = ResolveConfiguredFireState();
 
         bool firedByTrigger = TryFireAnimatorTrigger(fireTriggerName) ||
                              TryFireAnimatorTrigger("FireProjectile") ||
                              TryFireAnimatorTrigger("Fire Proje") ||
                              TryFireAnimatorTrigger("Fire Projectile");
 
-        if (firedByTrigger)
+        if (!string.IsNullOrWhiteSpace(stateToPlay))
         {
-            lastFireDebugMessage = "Triggered fire parameter";
-            return;
+            // Crossfade gives deterministic playback even if transition conditions are misconfigured.
+            animator.CrossFadeInFixedTime(stateToPlay, 0.02f, 0, 0f);
+            lastFireDebugMessage = $"Played fire state: {stateToPlay}";
+            return true;
         }
 
-        bool hasConfiguredState = animator.HasState(0, Animator.StringToHash("Base Layer." + fireStateName)) ||
-                                  animator.HasState(0, Animator.StringToHash(fireStateName));
-
-        if (hasConfiguredState)
+        if (firedByTrigger)
         {
-            // Safe fallback when a trigger parameter is missing or misnamed.
-            animator.CrossFadeInFixedTime(fireStateName, 0.02f, 0, 0f);
-            lastFireDebugMessage = "CrossFaded to fire state";
-            return;
+            lastFireDebugMessage = "Trigger set but no fire state found";
+            Debug.LogWarning($"PlayerMovement set fire trigger but could not find a fire state. Expected '{fireStateName}' or fallback 'SoulProjectile'.");
+            return false;
         }
 
         Debug.LogWarning($"PlayerMovement fire failed. Missing trigger '{fireTriggerName}' and missing state '{fireStateName}' in Animator.");
         lastFireDebugMessage = "No trigger and no fire state";
+        return false;
+    }
+
+    private string ResolveConfiguredFireState()
+    {
+        if (animator == null || animator.runtimeAnimatorController == null)
+            return null;
+
+        if (HasAnimatorState(fireStateName))
+            return fireStateName;
+
+        // Common project naming fallback for the player's throw state.
+        if (!string.Equals(fireStateName, "Throw") && HasAnimatorState("Throw"))
+            return "Throw";
+
+        if (!string.Equals(fireStateName, "ThrowOrb") && HasAnimatorState("ThrowOrb"))
+            return "ThrowOrb";
+
+        if (!string.Equals(fireStateName, "SoulProjectile") && HasAnimatorState("SoulProjectile"))
+            return "SoulProjectile";
+
+        return null;
+    }
+
+    private bool HasAnimatorState(string stateName)
+    {
+        if (animator == null || string.IsNullOrWhiteSpace(stateName))
+            return false;
+
+        return animator.HasState(0, Animator.StringToHash("Base Layer." + stateName)) ||
+               animator.HasState(0, Animator.StringToHash(stateName));
     }
 
     private bool TryFireAnimatorTrigger(string triggerName)
@@ -294,6 +378,134 @@ public class PlayerMovement : MonoBehaviour
         return false;
     }
 
+    public void GiveOrb()
+    {
+        hasOrb = true;
+        throwInProgress = false;
+        throwFinalizePending = false;
+        projectileSpawnedThisThrow = false;
+        SetAnimatorHasOrb(hasOrb);
+        lastFireDebugMessage = "Orb collected";
+    }
+
+    private void UpdateThrowLifecycle()
+    {
+        if (!throwFinalizePending)
+            return;
+
+        if (Time.unscaledTime < throwFinalizeAtUnscaledTime)
+            return;
+
+        if (!projectileSpawnedThisThrow)
+        {
+            bool reachedThrowSpawnMoment = HasReachedThrowSpawnMoment();
+            bool timedOutWaiting = Time.unscaledTime >= throwFinalizeTimeoutAtUnscaledTime;
+
+            if (!reachedThrowSpawnMoment && !timedOutWaiting)
+                return;
+
+            projectileSpawnedThisThrow = SpawnThrownProjectile();
+            if (!projectileSpawnedThisThrow && !timedOutWaiting)
+                return;
+        }
+
+        throwFinalizePending = false;
+
+        hasOrb = false;
+        throwInProgress = false;
+        SetAnimatorHasOrb(hasOrb);
+        if (projectileSpawnedThisThrow)
+            lastFireDebugMessage = "Orb thrown";
+
+        ForceExitFromThrowState();
+        projectileSpawnedThisThrow = false;
+    }
+
+    private bool HasReachedThrowSpawnMoment()
+    {
+        if (animator == null || animator.runtimeAnimatorController == null)
+            return true;
+
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        float threshold = Mathf.Clamp01(throwSpawnNormalizedTime);
+
+        bool inConfiguredState = stateInfo.IsName(fireStateName) || stateInfo.IsName("Base Layer." + fireStateName);
+        bool inThrowState = stateInfo.IsName("Throw") || stateInfo.IsName("Base Layer.Throw");
+        bool inThrowOrbState = stateInfo.IsName("ThrowOrb") || stateInfo.IsName("Base Layer.ThrowOrb");
+
+        if (inConfiguredState || inThrowState || inThrowOrbState)
+            return stateInfo.normalizedTime >= threshold;
+
+        // If we already left the throw state after min delay, allow spawn.
+        return !animator.IsInTransition(0);
+    }
+
+    private bool SpawnThrownProjectile()
+    {
+        if (thrownProjectilePrefab == null)
+        {
+            Debug.LogWarning("PlayerMovement throw skipped because thrownProjectilePrefab is not assigned.");
+            lastFireDebugMessage = "No projectile prefab assigned";
+            return false;
+        }
+
+        float facing = 1f;
+        if (spriteRenderer != null)
+            facing = spriteRenderer.flipX ? -1f : 1f;
+
+        Vector3 spawnPosition = projectileSpawnPoint != null
+            ? projectileSpawnPoint.position
+            : transform.position + new Vector3(projectileSpawnOffset.x * facing, projectileSpawnOffset.y, 0f);
+
+        GameObject projectile = Instantiate(thrownProjectilePrefab, spawnPosition, Quaternion.identity);
+
+        // Projectile prefab can share a controller whose default state is idle.
+        // Force the moving projectile animation state when spawned.
+        var projectileAnimator = projectile.GetComponent<Animator>();
+        if (projectileAnimator != null)
+        {
+            int projectileStateHash = Animator.StringToHash("SoulProjectile");
+            if (projectileAnimator.HasState(0, projectileStateHash) ||
+                projectileAnimator.HasState(0, Animator.StringToHash("Base Layer.SoulProjectile")))
+            {
+                projectileAnimator.Play("SoulProjectile", 0, 0f);
+            }
+        }
+
+        var mover = projectile.GetComponent<ProjectileMover2D>();
+        if (mover == null)
+            mover = projectile.AddComponent<ProjectileMover2D>();
+
+        mover.Initialize(new Vector2(facing, 0f), projectileSpeed, projectileLifetime);
+        lastFireDebugMessage = "Projectile spawned";
+        return true;
+    }
+
+    private void ForceExitFromThrowState()
+    {
+        if (animator == null || animator.runtimeAnimatorController == null)
+            return;
+
+        string locomotionState = Mathf.Abs(moveInput) > 0.05f ? "Running" : "Idle";
+        if (HasAnimatorState(locomotionState))
+            animator.CrossFadeInFixedTime(locomotionState, 0.04f, 0, 0f);
+    }
+
+    private void SetAnimatorHasOrb(bool value)
+    {
+        if (animator == null || string.IsNullOrWhiteSpace(hasOrbParameterName))
+            return;
+
+        foreach (var parameter in animator.parameters)
+        {
+            if (parameter.type == AnimatorControllerParameterType.Bool && parameter.name == hasOrbParameterName)
+            {
+                animator.SetBool(hasOrbParameterHash, value);
+                return;
+            }
+        }
+    }
+
     private void OnGUI()
     {
         if (!showInputDebug)
@@ -304,9 +516,13 @@ public class PlayerMovement : MonoBehaviour
             $"Game view focused: {Application.isFocused}\\n" +
             $"Keyboard current: {Keyboard.current != null}\\n" +
             $"Cooldown: {fireCooldownTimer:F2}\\n" +
+            $"Has orb: {hasOrb}\\n" +
+            $"Throw in progress: {throwInProgress}\\n" +
+            $"Throw finalize pending: {throwFinalizePending}\\n" +
+            $"Projectile prefab set: {thrownProjectilePrefab != null}\\n" +
             $"Grounded: {isGrounded}\\n" +
             $"Last fire result: {lastFireDebugMessage}";
 
-        GUI.Box(new Rect(10, 10, 320, 130), info);
+        GUI.Box(new Rect(10, 10, 340, 205), info);
     }
 }

@@ -1,111 +1,108 @@
 # Emberwake Projectile Setup Summary
 
-Date: 2026-03-25
+Date: 2026-03-30
 
-## What was implemented in code
+## Session outcome
 
-### Player fire input
-File: Assets/Scripts/PlayerMovement.cs
+Projectile throw flow is working again with the intended sequence:
+1. Player collects orb.
+2. Press F.
+3. Player plays throw animation.
+4. Projectile spawns and moves.
+5. Spawned projectile plays SoulProjectile animation (not idle).
 
-- Fire key is F.
-- Uses trigger name: FireProjectile.
-- Uses fire state name: SoulProjectile.
-- Fire cooldown is configurable (currently 0.1).
-- Added robust checks/fallback for animator trigger and state availability.
+## Current key files
 
-### Orb collectible sequence
-File: Assets/Scripts/LightOrbCollectible.cs
+1. Assets/Scripts/PlayerMovement.cs
+2. Assets/Scripts/ProjectileMover2D.cs
+3. Assets/Scripts/LightOrbCollectible.cs
+4. Assets/Player Animator.controller
+5. Assets/Orb.controller
+6. Assets/Prefabs/SoulProjectile.prefab
+7. Assets/Scenes/SampleScene.unity
 
-- Orb collection is driven by Collect trigger.
-- Destroy timing logic was adjusted to avoid long delay behavior.
-- Current setup supports fixed delay mode for predictable disappearance.
+## Important fixes made in this session
 
-## Animator controller separation (important)
+### 1) Throw state/clip recovery
 
-- Player fire animation belongs to Player Animator controller.
-- Orb pickup/projectile sequence belongs to Orb controller.
+- Player Animator throw state name in use: Throw.
+- Throw state clip is now bound to Throw.anim.
+- A previously missing throw clip GUID reference was replaced with a valid clip.
 
-Do not mix fire parameters between them.
+### 2) Projectile spawn timing behavior
 
-## Final known-good Animator setup
+- Spawn-at-start behavior is disabled.
+- Spawn now waits for throw progression and then releases projectile.
+- Added timing fields in PlayerMovement to tune release timing:
+  - throwConsumeDelay
+  - throwSpawnNormalizedTime
+  - throwSpawnMaxDelay
 
-### Player Animator (Assets/Player Animator.controller)
+### 3) Projectile animation state on spawned prefab
 
-Parameters:
-- Speed (float)
-- isGrounded (bool)
-- yVelocity (float)
-- isGliding (bool)
-- isFlying (bool)
-- FireProjectile (trigger)
+- Spawned projectile was showing idle animation due to shared controller defaults.
+- On spawn, code now forces projectile Animator to play SoulProjectile state.
 
-States:
-- Idle
-- Running
-- Jump
-- Glide
-- Flight
-- SoulProjectile
+### 4) Input robustness
 
-Transitions:
-1) Any State -> SoulProjectile
-- Condition: FireProjectile
-- Has Exit Time: Off
-- Transition Duration: 0
-- Can Transition To Self: Off
+- Fire/move/jump input now supports Input System keyboard and legacy fallback.
+- This avoids F key appearing dead when Keyboard.current is unavailable.
 
-2) SoulProjectile -> Idle
-- Condition: Speed < 0.1
-- Has Exit Time: On (or Off if you want immediate cancel)
-- Exit Time: 0.95 (if Has Exit Time On)
-- Transition Duration: 0.03
+## Current known-good serialized values
 
-3) SoulProjectile -> Running
-- Condition: Speed > 0.1
-- Has Exit Time: On (or Off if you want immediate cancel)
-- Exit Time: 0.95 (if Has Exit Time On)
-- Transition Duration: 0.03
+### In SampleScene PlayerMovement
 
-### Orb Animator (Assets/Orb.controller)
+- fireTriggerName: FireProjectile
+- fireStateName: Throw
+- thrownProjectilePrefab: Assets/Prefabs/SoulProjectile.prefab
+- spawnProjectileAtThrowStart: 0
+- throwConsumeDelay: 0.12
+- throwSpawnNormalizedTime: 0.62
+- throwSpawnMaxDelay: 0.75
 
-Parameters:
-- Collect (trigger) only
+### Animator snappiness tuning applied
 
-States:
-- Soul_Idle
-- SoulPickup
-- SoulProjectile
+- Throw state speed: 1.5
+- FireProjectile+HasOrb transition into Throw duration: 0.08
 
-Transitions:
-1) Soul_Idle -> SoulPickup
-- Condition: Collect
-- Has Exit Time: Off
-- Transition Duration: 0
+## Animator/controller notes
 
-2) SoulPickup -> SoulProjectile
-- No condition
-- Has Exit Time: On
-- Exit Time: 0.95
-- Transition Duration: 0.03
+### Player Animator controller
 
-3) SoulProjectile
-- No outgoing transition required if script destroys orb
+- Uses FireProjectile trigger.
+- Uses HasOrb bool condition for entering Throw.
+- Includes state names: Throw, Idle, Running, Jump, Glide, Flight, SoulProjectile.
 
-## Clip notes
+### Orb controller
 
-File: Assets/SoulProjectile.anim
+- Handles orb visual states (Soul_Idle, SoulPickup, SoulProjectile).
+- Used by orb visual and by projectile prefab Animator currently.
 
-- Loop Time should be Off for one-shot playback.
+## Prefab notes
 
-## Troubleshooting notes from session
+### SoulProjectile prefab
 
-- If player appears frozen, check Console Error Pause and turn it off.
-- Click Game view in Play mode to ensure keyboard focus.
-- If Animator graph throws edge wake-up/null errors, delete and recreate only the affected transitions.
-- If F does not animate, check Player Animator highlight, not Orb Animator highlight.
+- Has SpriteRenderer, Rigidbody2D, Collider2D, ProjectileMover2D.
+- Animator component exists and uses Orb controller.
+- Projectile movement is driven by ProjectileMover2D.Initialize at spawn.
 
-## To revisit later
+## Troubleshooting checklist for next session
 
-- Adjust whether SoulProjectile exits immediately or near end:
-  - Immediate cancel style: set Has Exit Time Off on SoulProjectile -> Idle/Running.
-  - Full cast style: keep Has Exit Time On with Exit Time around 0.95.
+1. If F does nothing:
+  - Confirm Game view focus.
+  - Check PlayerMovement debug text: Last fire result.
+  - Confirm hasOrb true after pickup.
+2. If throw anim does not show:
+  - Verify Player Animator Throw state still points to Throw.anim.
+  - Verify fireStateName is Throw in scene component.
+3. If projectile appears but is idle animation:
+  - Ensure spawn code still forces SoulProjectile state on spawned Animator.
+4. If projectile does not spawn:
+  - Verify thrownProjectilePrefab reference is not null.
+  - Verify throw timing values are not excessively high.
+
+## Suggested next improvements (optional)
+
+1. Move projectile spawn to an Animation Event in Throw.anim for exact frame-locked release.
+2. Split projectile into its own dedicated Animator controller to avoid orb idle state coupling.
+3. Remove now-unneeded fallback logic once final animator setup is fully stable.

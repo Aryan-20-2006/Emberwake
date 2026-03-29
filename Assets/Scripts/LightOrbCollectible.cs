@@ -61,6 +61,9 @@ public class LightOrbCollectible : MonoBehaviour
         if (collected || other == null)
             return;
 
+        PlayerMovement playerMovement = other.GetComponent<PlayerMovement>() ??
+                                       other.GetComponentInParent<PlayerMovement>();
+
         if (verboseLogs)
         {
             var otherHasPlayerMovement = other.GetComponent<PlayerMovement>() != null;
@@ -70,8 +73,7 @@ public class LightOrbCollectible : MonoBehaviour
 
         // Accept either a Player tag or a PlayerMovement component on this collider or its parent.
         bool isPlayer = other.CompareTag("Player") ||
-                        other.GetComponent<PlayerMovement>() != null ||
-                        other.GetComponentInParent<PlayerMovement>() != null;
+                        playerMovement != null;
 
         if (!isPlayer)
         {
@@ -82,6 +84,9 @@ public class LightOrbCollectible : MonoBehaviour
 
         collected = true;
         triggerCollider.enabled = false;
+
+        if (playerMovement != null)
+            playerMovement.GiveOrb();
 
         if (verboseLogs)
             Debug.Log($"[LightOrbCollectible] Collected by '{other.name}' via {source}.");

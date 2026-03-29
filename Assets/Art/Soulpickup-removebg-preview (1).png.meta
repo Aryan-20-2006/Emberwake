@@ -1,0 +1,936 @@
+fileFormatVersion: 2
+guid: f328463886b9f2e4e9ccc71b1397da58
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2755480486837991147
+    second: Soulpickup-removebg-preview (1)_0
+  - first:
+      213: 2610698605869564002
+    second: Soulpickup-removebg-preview (1)_1
+  - first:
+      213: -8737748066122986059
+    second: Soulpickup-removebg-preview (1)_2
+  - first:
+      213: -3454420573761272185
+    second: Soulpickup-removebg-preview (1)_3
+  - first:
+      213: 1485155179912718629
+    second: Soulpickup-removebg-preview (1)_4
+  - first:
+      213: 2370786461925630605
+    second: Soulpickup-removebg-preview (1)_5
+  - first:
+      213: -2301555473534595851
+    second: Soulpickup-removebg-preview (1)_6
+  - first:
+      213: 866189731327621416
+    second: Soulpickup-removebg-preview (1)_7
+  - first:
+      213: -31209658647125441
+    second: Soulpickup-removebg-preview (1)_8
+  - first:
+      213: -4426110944566207899
+    second: Soulpickup-removebg-preview (1)_9
+  - first:
+      213: 609519942791533632
+    second: Soulpickup-removebg-preview (1)_10
+  - first:
+      213: -7240890252816559183
+    second: Soulpickup-removebg-preview (1)_11
+  - first:
+      213: -498869294238353056
+    second: Soulpickup-removebg-preview (1)_12
+  - first:
+      213: -100225390577315391
+    second: Soulpickup-removebg-preview (1)_13
+  - first:
+      213: 118710023519284111
+    second: Soulpickup-removebg-preview (1)_14
+  - first:
+      213: -4732677252051512170
+    second: Soulpickup-removebg-preview (1)_15
+  - first:
+      213: -7417960898650935148
+    second: Soulpickup-removebg-preview (1)_16
+  - first:
+      213: -6945246567971883003
+    second: Soulpickup-removebg-preview (1)_17
+  - first:
+      213: -6747060978904717256
+    second: Soulpickup-removebg-preview (1)_18
+  - first:
+      213: 2323413643463388416
+    second: Soulpickup-removebg-preview (1)_19
+  - first:
+      213: 1358218641442581424
+    second: Soulpickup-removebg-preview (1)_20
+  - first:
+      213: -6053164838545087274
+    second: Soulpickup-removebg-preview (1)_21
+  - first:
+      213: 48510334586432174
+    second: Soulpickup-removebg-preview (1)_22
+  - first:
+      213: -7688445554717792846
+    second: Soulpickup-removebg-preview (1)_23
+  - first:
+      213: -236212876008069331
+    second: Soulpickup-removebg-preview (1)_24
+  - first:
+      213: -1685629886336951430
+    second: Soulpickup-removebg-preview (1)_25
+  - first:
+      213: -2392271084132835300
+    second: Soulpickup-removebg-preview (1)_26
+  - first:
+      213: -2635568324007615481
+    second: Soulpickup-removebg-preview (1)_27
+  - first:
+      213: -934113153815096388
+    second: Soulpickup-removebg-preview (1)_28
+  - first:
+      213: 1924164919712746408
+    second: Soulpickup-removebg-preview (1)_29
+  - first:
+      213: -9144533840442735059
+    second: Soulpickup-removebg-preview (1)_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Soulpickup-removebg-preview (1)_0
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 252
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 519408ca81192c9d0800000000000000
+      internalID: -2755480486837991147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soulpickup-removebg-preview (1)_1
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 227
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 260867acc801b3420800000000000000
+      internalID: 2610698605869564002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soulpickup-removebg-preview (1)_2
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 212
+        width: 101
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bd02edad684db680800000000000000
+      internalID: -8737748066122986059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soulpickup-removebg-preview (1)_3
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 207
+        width: 124
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 786882c5ace6f00d0800000000000000
+      internalID: -3454420573761272185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soulpickup-removebg-preview (1)_4
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 37
+        width: 135
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 529670774c45c9410800000000000000
+      internalID: 1485155179912718629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soulpickup-removebg-preview (1)_5
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 20
+        width: 128
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d82e165e9b9b6e020800000000000000
+      internalID: 2370786461925630605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soulpickup-removebg-preview (1)_6
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 37
+        width: 123
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fc4d11bd7b3f00e0800000000000000
+      internalID: -2301555473534595851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soulpickup-removebg-preview (1)_7
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 143
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 829bfdba8f2550c00800000000000000
+      internalID: 866189731327621416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soulpickup-removebg-preview (1)_8
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 134
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f32e6c61bfe119ff0800000000000000
+      internalID: -31209658647125441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soulpickup-removebg-preview (1)_9
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 149
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56a99a4eb8b4392c0800000000000000
+      internalID: -4426110944566207899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soulpickup-removebg-preview (1)_10
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 116
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0441b999823757800800000000000000
+      internalID: 609519942791533632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soulpickup-removebg-preview (1)_11
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 140
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b3d74fcda0338b90800000000000000
+      internalID: -7240890252816559183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soulpickup-removebg-preview (1)_12
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 127
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 069b29f1509a319f0800000000000000
+      internalID: -498869294238353056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soulpickup-removebg-preview (1)_13
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 122
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c11a2dc98deb9ef0800000000000000
+      internalID: -100225390577315391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soulpickup-removebg-preview (1)_14
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 119
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8b252f232eb5a100800000000000000
+      internalID: 118710023519284111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soulpickup-removebg-preview (1)_15
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 103
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 694d5e23d17225eb0800000000000000
+      internalID: -4732677252051512170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soulpickup-removebg-preview (1)_16
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 107
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4907c2e5ddb1e0990800000000000000
+      internalID: -7417960898650935148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soulpickup-removebg-preview (1)_17
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 106
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 508f88e3b078d9f90800000000000000
+      internalID: -6945246567971883003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soulpickup-removebg-preview (1)_18
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 97
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8382c7289cf9d52a0800000000000000
+      internalID: -6747060978904717256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soulpickup-removebg-preview (1)_19
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 91
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00d6ee4166c6e3020800000000000000
+      internalID: 2323413643463388416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soulpickup-removebg-preview (1)_20
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 86
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bbaf7288ac59d210800000000000000
+      internalID: 1358218641442581424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soulpickup-removebg-preview (1)_21
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 63
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d4a2af76a6defba0800000000000000
+      internalID: -6053164838545087274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soulpickup-removebg-preview (1)_22
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 79
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaaa5fc64e75ca000800000000000000
+      internalID: 48510334586432174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soulpickup-removebg-preview (1)_23
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 80
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b56d1cc0872d4590800000000000000
+      internalID: -7688445554717792846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soulpickup-removebg-preview (1)_24
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 68
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d276a2a04adc8bcf0800000000000000
+      internalID: -236212876008069331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soulpickup-removebg-preview (1)_25
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 61
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7b9a1a9c807b98e0800000000000000
+      internalID: -1685629886336951430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soulpickup-removebg-preview (1)_26
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 60
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c10e2dfaf12fcced0800000000000000
+      internalID: -2392271084132835300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soulpickup-removebg-preview (1)_27
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 58
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 704214ab2949c6bd0800000000000000
+      internalID: -2635568324007615481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soulpickup-removebg-preview (1)_28
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 36
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb3d4d6290d5903f0800000000000000
+      internalID: -934113153815096388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soulpickup-removebg-preview (1)_29
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 41
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ab0fb0ccc104ba10800000000000000
+      internalID: 1924164919712746408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soulpickup-removebg-preview (1)_30
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 14
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d264fd30ce6181180800000000000000
+      internalID: -9144533840442735059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Soulpickup-removebg-preview (1)_0: -2755480486837991147
+      Soulpickup-removebg-preview (1)_1: 2610698605869564002
+      Soulpickup-removebg-preview (1)_10: 609519942791533632
+      Soulpickup-removebg-preview (1)_11: -7240890252816559183
+      Soulpickup-removebg-preview (1)_12: -498869294238353056
+      Soulpickup-removebg-preview (1)_13: -100225390577315391
+      Soulpickup-removebg-preview (1)_14: 118710023519284111
+      Soulpickup-removebg-preview (1)_15: -4732677252051512170
+      Soulpickup-removebg-preview (1)_16: -7417960898650935148
+      Soulpickup-removebg-preview (1)_17: -6945246567971883003
+      Soulpickup-removebg-preview (1)_18: -6747060978904717256
+      Soulpickup-removebg-preview (1)_19: 2323413643463388416
+      Soulpickup-removebg-preview (1)_2: -8737748066122986059
+      Soulpickup-removebg-preview (1)_20: 1358218641442581424
+      Soulpickup-removebg-preview (1)_21: -6053164838545087274
+      Soulpickup-removebg-preview (1)_22: 48510334586432174
+      Soulpickup-removebg-preview (1)_23: -7688445554717792846
+      Soulpickup-removebg-preview (1)_24: -236212876008069331
+      Soulpickup-removebg-preview (1)_25: -1685629886336951430
+      Soulpickup-removebg-preview (1)_26: -2392271084132835300
+      Soulpickup-removebg-preview (1)_27: -2635568324007615481
+      Soulpickup-removebg-preview (1)_28: -934113153815096388
+      Soulpickup-removebg-preview (1)_29: 1924164919712746408
+      Soulpickup-removebg-preview (1)_3: -3454420573761272185
+      Soulpickup-removebg-preview (1)_30: -9144533840442735059
+      Soulpickup-removebg-preview (1)_4: 1485155179912718629
+      Soulpickup-removebg-preview (1)_5: 2370786461925630605
+      Soulpickup-removebg-preview (1)_6: -2301555473534595851
+      Soulpickup-removebg-preview (1)_7: 866189731327621416
+      Soulpickup-removebg-preview (1)_8: -31209658647125441
+      Soulpickup-removebg-preview (1)_9: -4426110944566207899
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

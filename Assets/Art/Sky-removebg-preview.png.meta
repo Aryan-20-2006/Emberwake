@@ -1,0 +1,1612 @@
+fileFormatVersion: 2
+guid: dcf4e97e12be286429ba31fc98161db0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1029262023754660135
+    second: Sky-removebg-preview_0
+  - first:
+      213: -2740563054764263714
+    second: Sky-removebg-preview_1
+  - first:
+      213: -8897251062556610136
+    second: Sky-removebg-preview_2
+  - first:
+      213: 4972287192801832652
+    second: Sky-removebg-preview_3
+  - first:
+      213: 3277258733335019468
+    second: Sky-removebg-preview_4
+  - first:
+      213: 5029219907597232866
+    second: Sky-removebg-preview_5
+  - first:
+      213: -1516487300931248078
+    second: Sky-removebg-preview_6
+  - first:
+      213: -6860652435252757027
+    second: Sky-removebg-preview_7
+  - first:
+      213: -4126852460386128378
+    second: Sky-removebg-preview_8
+  - first:
+      213: -4992962272803455632
+    second: Sky-removebg-preview_9
+  - first:
+      213: -5671733934574121398
+    second: Sky-removebg-preview_10
+  - first:
+      213: 5439800971641114224
+    second: Sky-removebg-preview_11
+  - first:
+      213: -4049793926056412541
+    second: Sky-removebg-preview_12
+  - first:
+      213: -342295082613851073
+    second: Sky-removebg-preview_13
+  - first:
+      213: -8027463557154751903
+    second: Sky-removebg-preview_14
+  - first:
+      213: 1786946428941129268
+    second: Sky-removebg-preview_15
+  - first:
+      213: -6153752066839139609
+    second: Sky-removebg-preview_16
+  - first:
+      213: 357432533476689118
+    second: Sky-removebg-preview_17
+  - first:
+      213: -3702822625488054758
+    second: Sky-removebg-preview_18
+  - first:
+      213: 705701375094932656
+    second: Sky-removebg-preview_19
+  - first:
+      213: 1068194012460915086
+    second: Sky-removebg-preview_20
+  - first:
+      213: -8848118576073716839
+    second: Sky-removebg-preview_21
+  - first:
+      213: -6166841717205720185
+    second: Sky-removebg-preview_22
+  - first:
+      213: 4344648597679268410
+    second: Sky-removebg-preview_23
+  - first:
+      213: 9170837522177875740
+    second: Sky-removebg-preview_24
+  - first:
+      213: -6678159623019865205
+    second: Sky-removebg-preview_25
+  - first:
+      213: 1193217666809714103
+    second: Sky-removebg-preview_26
+  - first:
+      213: 4038884047884653595
+    second: Sky-removebg-preview_27
+  - first:
+      213: 1458006054543862213
+    second: Sky-removebg-preview_28
+  - first:
+      213: 5604599834549255043
+    second: Sky-removebg-preview_29
+  - first:
+      213: 3294220861632245375
+    second: Sky-removebg-preview_30
+  - first:
+      213: -212258152036330248
+    second: Sky-removebg-preview_31
+  - first:
+      213: 2992863219590652404
+    second: Sky-removebg-preview_32
+  - first:
+      213: -7832141823112782707
+    second: Sky-removebg-preview_33
+  - first:
+      213: -7234894158227691839
+    second: Sky-removebg-preview_34
+  - first:
+      213: -8857359585107599889
+    second: Sky-removebg-preview_35
+  - first:
+      213: -374537375006997439
+    second: Sky-removebg-preview_36
+  - first:
+      213: 1815364826020808966
+    second: Sky-removebg-preview_37
+  - first:
+      213: 876296331968114231
+    second: Sky-removebg-preview_38
+  - first:
+      213: -229368167387164381
+    second: Sky-removebg-preview_39
+  - first:
+      213: 2798030089251913638
+    second: Sky-removebg-preview_40
+  - first:
+      213: -7385494303202831338
+    second: Sky-removebg-preview_41
+  - first:
+      213: 4371764110568869788
+    second: Sky-removebg-preview_42
+  - first:
+      213: -1967278342850090790
+    second: Sky-removebg-preview_43
+  - first:
+      213: 8097892545939480986
+    second: Sky-removebg-preview_44
+  - first:
+      213: 1051627928045380596
+    second: Sky-removebg-preview_45
+  - first:
+      213: -8765829795818239757
+    second: Sky-removebg-preview_46
+  - first:
+      213: -6248913352698796598
+    second: Sky-removebg-preview_47
+  - first:
+      213: 5050315912435570064
+    second: Sky-removebg-preview_48
+  - first:
+      213: 2868211880452989726
+    second: Sky-removebg-preview_49
+  - first:
+      213: 4647673775949402434
+    second: Sky-removebg-preview_50
+  - first:
+      213: 8014173171265985411
+    second: Sky-removebg-preview_51
+  - first:
+      213: 2137748471865262371
+    second: Sky-removebg-preview_52
+  - first:
+      213: -8037272460534294911
+    second: Sky-removebg-preview_53
+  - first:
+      213: -4507359635461696964
+    second: Sky-removebg-preview_54
+  - first:
+      213: -3145317695848639943
+    second: Sky-removebg-preview_55
+  - first:
+      213: 3833920221394413720
+    second: Sky-removebg-preview_56
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sky-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 325
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72932ba7b5ca84e00800000000000000
+      internalID: 1029262023754660135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 325
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed6773cfb6097f9d0800000000000000
+      internalID: -2740563054764263714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 324
+        width: 28
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a1b8da5c4d968480800000000000000
+      internalID: -8897251062556610136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 324
+        width: 30
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cce6d288bdc110540800000000000000
+      internalID: 4972287192801832652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 320
+        width: 28
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccffa7d44792b7d20800000000000000
+      internalID: 3277258733335019468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 323
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eae7a92cd06bc540800000000000000
+      internalID: 5029219907597232866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_6
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 268
+        width: 36
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2302a91a5da54fae0800000000000000
+      internalID: -1516487300931248078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_7
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 267
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddd375d95f01ac0a0800000000000000
+      internalID: -6860652435252757027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_8
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 266
+        width: 39
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60eec326d897ab6c0800000000000000
+      internalID: -4126852460386128378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_9
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 266
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07d7f98444f65bab0800000000000000
+      internalID: -4992962272803455632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_10
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 266
+        width: 38
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4e4e216904f941b0800000000000000
+      internalID: -5671733934574121398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_11
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 269
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07e4e73992e0e7b40800000000000000
+      internalID: 5439800971641114224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_12
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 266
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38a7fd781ed3cc7c0800000000000000
+      internalID: -4049793926056412541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_13
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 269
+        width: 33
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3c30789f6cef3bf0800000000000000
+      internalID: -342295082613851073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_14
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 216
+        width: 34
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16ab5641d68b89090800000000000000
+      internalID: -8027463557154751903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_15
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 217
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43650b93f428cc810800000000000000
+      internalID: 1786946428941129268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_16
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 215
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ea2a34691b799aa0800000000000000
+      internalID: -6153752066839139609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_17
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 217
+        width: 36
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed4cb05defad5f400800000000000000
+      internalID: 357432533476689118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_18
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 220
+        width: 34
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a165185c07eec9cc0800000000000000
+      internalID: -3702822625488054758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_19
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 222
+        width: 37
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b4c90469a72bc900800000000000000
+      internalID: 705701375094932656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_20
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 223
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e899ee77bccf2de00800000000000000
+      internalID: 1068194012460915086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_21
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 217
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99b479ec80b253580800000000000000
+      internalID: -8848118576073716839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_22
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 166
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 783a4eba12afa6aa0800000000000000
+      internalID: -6166841717205720185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_23
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 168
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a32629271ea4b4c30800000000000000
+      internalID: 4344648597679268410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_24
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 166
+        width: 42
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1f5c32232c554f70800000000000000
+      internalID: 9170837522177875740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_25
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 165
+        width: 44
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8b5b8c84396253a0800000000000000
+      internalID: -6678159623019865205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_26
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 171
+        width: 48
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b5d9e165292f8010800000000000000
+      internalID: 1193217666809714103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_27
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 167
+        width: 43
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b14182384affc0830800000000000000
+      internalID: 4038884047884653595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_28
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 167
+        width: 42
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c9a47128c0eb3410800000000000000
+      internalID: 1458006054543862213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_29
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 168
+        width: 45
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38b7586ead987cd40800000000000000
+      internalID: 5604599834549255043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_30
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 171
+        width: 41
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7e654d8b6c67bd20800000000000000
+      internalID: 3294220861632245375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_31
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 171
+        width: 43
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f49137d558ed0df0800000000000000
+      internalID: -212258152036330248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_32
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 171
+        width: 44
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f16809cd39c88920800000000000000
+      internalID: 2992863219590652404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_33
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 118
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8cd1e22284ae4390800000000000000
+      internalID: -7832141823112782707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_34
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 119
+        width: 35
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c62a4f581e789b90800000000000000
+      internalID: -7234894158227691839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_35
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 113
+        width: 41
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fed92c9b266541580800000000000000
+      internalID: -8857359585107599889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_36
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 119
+        width: 38
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 144c997ed306dcaf0800000000000000
+      internalID: -374537375006997439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_37
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 119
+        width: 39
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60985b8e0b8713910800000000000000
+      internalID: 1815364826020808966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_38
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 115
+        width: 38
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73eefe00fda392c00800000000000000
+      internalID: 876296331968114231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_39
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 114
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3211b14fdde11dcf0800000000000000
+      internalID: -229368167387164381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_40
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 113
+        width: 38
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6aff6b4aa8994d620800000000000000
+      internalID: 2798030089251913638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_41
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 58
+        width: 34
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6149ceeaf04718990800000000000000
+      internalID: -7385494303202831338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_42
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 54
+        width: 36
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9f4244cb40abac30800000000000000
+      internalID: 4371764110568869788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_43
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 54
+        width: 38
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad8e91035c2d2b4e0800000000000000
+      internalID: -1967278342850090790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_44
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 52
+        width: 34
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a91a106bd5e716070800000000000000
+      internalID: 8097892545939480986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_45
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 53
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f3660f5702289e00800000000000000
+      internalID: 1051627928045380596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_46
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 53
+        width: 36
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f808ba7e34895680800000000000000
+      internalID: -8765829795818239757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_47
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 52
+        width: 37
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac56134f9666749a0800000000000000
+      internalID: -6248913352698796598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_48
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 52
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 095993c8093561640800000000000000
+      internalID: 5050315912435570064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_49
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 9
+        width: 35
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e13a4f2428fedc720800000000000000
+      internalID: 2868211880452989726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_50
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 6
+        width: 43
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 241dc5fbcaadf7040800000000000000
+      internalID: 4647673775949402434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_51
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 10
+        width: 41
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38b56c1d900183f60800000000000000
+      internalID: 8014173171265985411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_52
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 5
+        width: 39
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 321c9aca8eecaad10800000000000000
+      internalID: 2137748471865262371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_53
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 7
+        width: 43
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 186d2dac74fd57090800000000000000
+      internalID: -8037272460534294911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_54
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 9
+        width: 42
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c321f55ea44a271c0800000000000000
+      internalID: -4507359635461696964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_55
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 6
+        width: 45
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 932113168369954d0800000000000000
+      internalID: -3145317695848639943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky-removebg-preview_56
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 14
+        width: 43
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 898a66dd022d43530800000000000000
+      internalID: 3833920221394413720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Sky-removebg-preview_0: 1029262023754660135
+      Sky-removebg-preview_1: -2740563054764263714
+      Sky-removebg-preview_10: -5671733934574121398
+      Sky-removebg-preview_11: 5439800971641114224
+      Sky-removebg-preview_12: -4049793926056412541
+      Sky-removebg-preview_13: -342295082613851073
+      Sky-removebg-preview_14: -8027463557154751903
+      Sky-removebg-preview_15: 1786946428941129268
+      Sky-removebg-preview_16: -6153752066839139609
+      Sky-removebg-preview_17: 357432533476689118
+      Sky-removebg-preview_18: -3702822625488054758
+      Sky-removebg-preview_19: 705701375094932656
+      Sky-removebg-preview_2: -8897251062556610136
+      Sky-removebg-preview_20: 1068194012460915086
+      Sky-removebg-preview_21: -8848118576073716839
+      Sky-removebg-preview_22: -6166841717205720185
+      Sky-removebg-preview_23: 4344648597679268410
+      Sky-removebg-preview_24: 9170837522177875740
+      Sky-removebg-preview_25: -6678159623019865205
+      Sky-removebg-preview_26: 1193217666809714103
+      Sky-removebg-preview_27: 4038884047884653595
+      Sky-removebg-preview_28: 1458006054543862213
+      Sky-removebg-preview_29: 5604599834549255043
+      Sky-removebg-preview_3: 4972287192801832652
+      Sky-removebg-preview_30: 3294220861632245375
+      Sky-removebg-preview_31: -212258152036330248
+      Sky-removebg-preview_32: 2992863219590652404
+      Sky-removebg-preview_33: -7832141823112782707
+      Sky-removebg-preview_34: -7234894158227691839
+      Sky-removebg-preview_35: -8857359585107599889
+      Sky-removebg-preview_36: -374537375006997439
+      Sky-removebg-preview_37: 1815364826020808966
+      Sky-removebg-preview_38: 876296331968114231
+      Sky-removebg-preview_39: -229368167387164381
+      Sky-removebg-preview_4: 3277258733335019468
+      Sky-removebg-preview_40: 2798030089251913638
+      Sky-removebg-preview_41: -7385494303202831338
+      Sky-removebg-preview_42: 4371764110568869788
+      Sky-removebg-preview_43: -1967278342850090790
+      Sky-removebg-preview_44: 8097892545939480986
+      Sky-removebg-preview_45: 1051627928045380596
+      Sky-removebg-preview_46: -8765829795818239757
+      Sky-removebg-preview_47: -6248913352698796598
+      Sky-removebg-preview_48: 5050315912435570064
+      Sky-removebg-preview_49: 2868211880452989726
+      Sky-removebg-preview_5: 5029219907597232866
+      Sky-removebg-preview_50: 4647673775949402434
+      Sky-removebg-preview_51: 8014173171265985411
+      Sky-removebg-preview_52: 2137748471865262371
+      Sky-removebg-preview_53: -8037272460534294911
+      Sky-removebg-preview_54: -4507359635461696964
+      Sky-removebg-preview_55: -3145317695848639943
+      Sky-removebg-preview_56: 3833920221394413720
+      Sky-removebg-preview_6: -1516487300931248078
+      Sky-removebg-preview_7: -6860652435252757027
+      Sky-removebg-preview_8: -4126852460386128378
+      Sky-removebg-preview_9: -4992962272803455632
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

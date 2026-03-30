@@ -33,6 +33,9 @@ public class PlayerMovement : MonoBehaviour
     public float projectileSpeed = 10f;
     public float projectileLifetime = 1.4f;
     public bool spawnProjectileAtThrowStart = false;
+    public bool useBoundsBasedProjectileSpawn = true;
+    public float airborneSpawnLeadFactor = 0.02f;
+    public float maxAirborneSpawnLead = 0.1f;
 
     [Header("Debug")]
     public bool showInputDebug = true;
@@ -65,6 +68,7 @@ public class PlayerMovement : MonoBehaviour
     private float throwFinalizeAtUnscaledTime;
     private float throwFinalizeTimeoutAtUnscaledTime;
     private string lastFireDebugMessage = "none";
+    private float lastFacingSign = 1f;
 
     void Start()
     {
@@ -181,9 +185,23 @@ public class PlayerMovement : MonoBehaviour
         if (spriteRenderer != null)
         {
             if (moveInput > 0)
+            {
                 spriteRenderer.flipX = false;
+                lastFacingSign = 1f;
+            }
             else if (moveInput < 0)
+            {
                 spriteRenderer.flipX = true;
+                lastFacingSign = -1f;
+            }
+        }
+        else if (moveInput > 0.01f)
+        {
+            lastFacingSign = 1f;
+        }
+        else if (moveInput < -0.01f)
+        {
+            lastFacingSign = -1f;
         }
 
         bool firePressedThisFrame = firePressedNow;
@@ -449,13 +467,8 @@ public class PlayerMovement : MonoBehaviour
             return false;
         }
 
-        float facing = 1f;
-        if (spriteRenderer != null)
-            facing = spriteRenderer.flipX ? -1f : 1f;
-
-        Vector3 spawnPosition = projectileSpawnPoint != null
-            ? projectileSpawnPoint.position
-            : transform.position + new Vector3(projectileSpawnOffset.x * facing, projectileSpawnOffset.y, 0f);
+        float facing = ResolveFacingDirection();
+        Vector3 spawnPosition = ResolveProjectileSpawnPosition(facing);
 
         GameObject projectile = Instantiate(thrownProjectilePrefab, spawnPosition, Quaternion.identity);
 
@@ -476,9 +489,53 @@ public class PlayerMovement : MonoBehaviour
         if (mover == null)
             mover = projectile.AddComponent<ProjectileMover2D>();
 
-        mover.Initialize(new Vector2(facing, 0f), projectileSpeed, projectileLifetime);
+        Collider2D ownerCollider = GetComponent<Collider2D>();
+        if (ownerCollider == null)
+            ownerCollider = GetComponentInChildren<Collider2D>();
+
+        mover.Initialize(new Vector2(facing, 0f), projectileSpeed, projectileLifetime, ownerCollider);
         lastFireDebugMessage = "Projectile spawned";
         return true;
+    }
+
+    private float ResolveFacingDirection()
+    {
+        if (spriteRenderer != null)
+            return spriteRenderer.flipX ? -1f : 1f;
+
+        if (Mathf.Abs(moveInput) > 0.01f)
+            return moveInput > 0f ? 1f : -1f;
+
+        return lastFacingSign >= 0f ? 1f : -1f;
+    }
+
+    private Vector3 ResolveProjectileSpawnPosition(float facing)
+    {
+        if (projectileSpawnPoint != null)
+            return projectileSpawnPoint.position;
+
+        if (!useBoundsBasedProjectileSpawn)
+            return transform.position + new Vector3(projectileSpawnOffset.x * facing, projectileSpawnOffset.y, 0f);
+
+        Collider2D ownerCollider = GetComponent<Collider2D>();
+        if (ownerCollider == null)
+            ownerCollider = GetComponentInChildren<Collider2D>();
+
+        if (ownerCollider == null)
+            return transform.position + new Vector3(projectileSpawnOffset.x * facing, projectileSpawnOffset.y, 0f);
+
+        Bounds bounds = ownerCollider.bounds;
+        float edgeX = facing > 0f ? bounds.max.x : bounds.min.x;
+        float x = edgeX + (projectileSpawnOffset.x * facing);
+        float y = bounds.center.y + projectileSpawnOffset.y;
+
+        if (rb != null)
+        {
+            float yLead = Mathf.Clamp(rb.linearVelocity.y * airborneSpawnLeadFactor, -maxAirborneSpawnLead, maxAirborneSpawnLead);
+            y += yLead;
+        }
+
+        return new Vector3(x, y, transform.position.z);
     }
 
     private void ForceExitFromThrowState()

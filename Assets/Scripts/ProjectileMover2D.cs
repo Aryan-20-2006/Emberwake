@@ -138,7 +138,35 @@ public class ProjectileMover2D : MonoBehaviour
         if ((surfaceLayers.value & otherLayerMask) == 0)
             return;
 
+        NotifyBreakableWall(other);
+
         StartDespawn(isImpact: true);
+    }
+
+    private void NotifyBreakableWall(Collider2D other)
+    {
+        if (other == null)
+            return;
+
+        BreakableWall2D breakableWall = other.GetComponent<BreakableWall2D>();
+
+        if (breakableWall == null)
+            breakableWall = other.GetComponentInParent<BreakableWall2D>();
+
+        if (breakableWall == null)
+            breakableWall = other.GetComponentInChildren<BreakableWall2D>(true);
+
+        if (breakableWall == null && other.attachedRigidbody != null)
+            breakableWall = other.attachedRigidbody.GetComponent<BreakableWall2D>();
+
+        if (breakableWall == null && other.attachedRigidbody != null)
+            breakableWall = other.attachedRigidbody.GetComponentInChildren<BreakableWall2D>(true);
+
+        if (breakableWall == null)
+            breakableWall = other.transform.root.GetComponentInChildren<BreakableWall2D>(true);
+
+        if (breakableWall != null)
+            breakableWall.TryBreak();
     }
 
     private void StartDespawn(bool isImpact)

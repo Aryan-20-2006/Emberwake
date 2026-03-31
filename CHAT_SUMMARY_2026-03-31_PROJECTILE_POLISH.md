@@ -2,6 +2,8 @@
 
 Date: 2026-03-31
 
+Update: 2026-04-01
+
 ## Session outcome
 
 Projectile behavior was polished and is now working with improved feel:
@@ -99,17 +101,74 @@ In PlayerMovement:
 - airborneSpawnLeadFactor = 0.02
 - maxAirborneSpawnLead = 0.10
 
-## Tomorrow starting point (enemies and damage)
+## 2026-04-01 update (wall break obstacles)
 
-Before coding:
-1. Define target types and damage rules (enemy, structure, both).
-2. Set layers/tags for damage filtering.
-3. Prepare one enemy prefab and one structure prefab with colliders.
-4. Decide damage values and HP values.
-5. Run a small test checklist for hit/destroy behavior.
+### Session outcome
 
-Then implement in this order:
-1. Add reusable damageable health component.
-2. Apply damage from ProjectileMover2D on valid hit target.
-3. Add simple death/destroy handling for enemy and structure prefabs.
-4. Verify projectile impact behavior still works with walls/empty-space despawn.
+Projectile can now break wall obstacles with animator-driven feedback, and walls can disappear after the break animation finishes.
+
+### Main files updated
+
+1. Assets/Scripts/ProjectileMover2D.cs
+2. Assets/Scripts/BreakableWall2D.cs
+
+### What was implemented today
+
+1. Added breakable wall component:
+  - New script: BreakableWall2D.
+  - Trigger-based animator hook using BreakNow.
+  - One-time break guard to prevent repeated trigger spam.
+
+2. Connected projectile impact to breakable walls:
+  - Projectile impact now attempts to resolve BreakableWall2D from collider, parent, children, rigidbody, and root hierarchy.
+  - If found, TryBreak is called before projectile impact despawn.
+
+3. Collider handling for break event:
+  - Supports disabling blocking collider on break.
+  - Supports optional intact->broken collider swap.
+  - Supports optional animation-event timing for collider swap.
+
+4. Simplified animation flow:
+  - Removed hard dependency on a separate Broken state.
+  - Recommended setup is Intact -> Break, with Break ending on final frame.
+
+5. Post-break lifecycle:
+  - Added optional wall disappearance after break.
+  - Supports exact timing via Animation Event method OnBreakAnimationFinished.
+  - Supports fallback timed destroy when events are not used.
+
+### Current recommended wall setup
+
+1. Animator states: Intact -> Break.
+2. Break clip: Loop Time off.
+3. No transition out of Break (hold last frame) unless disappear-on-finish is enabled.
+4. BreakNow trigger exists and matches script field exactly.
+5. If disappearing after break, add Animation Event on last Break frame:
+  - Function: OnBreakAnimationFinished.
+
+## Next work (2026-04-02 target)
+
+Build a fast single-orb collection loop where the same orb is both progress and wall-break currency.
+
+### Target implementation order
+
+1. Orb inventory counters:
+  - heldOrbs: spendable currency.
+  - totalCollected: lifetime progress count.
+
+2. Wall break cost check:
+  - Require heldOrbs >= breakCost (start at 1).
+  - Spend heldOrbs when wall break succeeds.
+
+3. Level target logic:
+  - Win condition uses totalCollected >= target.
+  - Spending should not reduce completion progress.
+
+4. HUD pass:
+  - Show Held Orbs.
+  - Show Progress totalCollected/target.
+
+5. Level design pass:
+  - Place walls as orb sinks/obstacles.
+  - Hide some orbs behind breakable walls.
+  - Ensure at least one completable resource path.
